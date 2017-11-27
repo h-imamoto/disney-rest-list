@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { DateSetComponent } from './date-set/date-set.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DateSetComponent
   ],
   imports: [
     BrowserModule
