@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { TermSetComponent } from './term-set/term-set.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TermSetComponent
   ],
   imports: [
     BrowserModule
