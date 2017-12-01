@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { DateSetPark } from '../date-set-park';
 
 @Component({
   selector: 'app-date-set',
@@ -7,8 +8,14 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class DateSetComponent implements OnInit {
+   park: DateSetPark;
+   date: Date;
 
-  constructor() { }
+
+  constructor(park: DateSetPark, date: Date) {
+    this.park = park;
+    this.date = date;
+   }
 
   ngOnInit() {
   }
