@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 
 import  {DateSetPark} from './date-set-park';
-import { DateSetAtraction } from "./date-set-atraction";
+import { RestingAtraction } from "./resting-atraction";
+import { RestingShow } from "./resting-show";
 import { RestTerm} from "./rest-term"
 import { EndDate } from "./end-date"
 import { DisneyDate } from "./disney-date"
-import { DateSetShow } from "./date-set-show";
 import { DateSetLand } from "./date-set-land";
 import { DateSetSea } from "./date-set-sea";
 
@@ -18,38 +18,38 @@ export class DateSetFilterService {
     return new DateSetPark(
       new DateSetLand(
         [
-          new DateSetAtraction('テストアトラクション1'),
-          new DateSetAtraction('テストアトラクション2'),
-          new DateSetAtraction('テストアトラクション3'),
-          new DateSetAtraction('テストアトラクション4'),
-          new DateSetAtraction('テストアトラクション5'),
-          new DateSetAtraction('テストアトラクション6'),
+          new RestingAtraction('テストアトラクション1'),
+          new RestingAtraction('テストアトラクション2'),
+          new RestingAtraction('テストアトラクション3'),
+          new RestingAtraction('テストアトラクション4'),
+          new RestingAtraction('テストアトラクション5'),
+          new RestingAtraction('テストアトラクション6'),
         ],
         [
-          new DateSetShow('テストショウ1'),
-          new DateSetShow('テストショウ2'),
-          new DateSetShow('テストショウ3'),
-          new DateSetShow('テストショウ4'),
-          new DateSetShow('テストショウ5'),
-          new DateSetShow('テストショウ6'),
+          new RestingShow('テストショウ1'),
+          new RestingShow('テストショウ2'),
+          new RestingShow('テストショウ3'),
+          new RestingShow('テストショウ4'),
+          new RestingShow('テストショウ5'),
+          new RestingShow('テストショウ6'),
         ]
       ),
       new DateSetSea(
         [
-          new DateSetAtraction('テストアトラクション1'),
-          new DateSetAtraction('テストアトラクション2'),
-          new DateSetAtraction('テストアトラクション3'),
-          new DateSetAtraction('テストアトラクション4'),
-          new DateSetAtraction('テストアトラクション5'),
-          new DateSetAtraction('テストアトラクション6'),
+          new RestingAtraction('テストアトラクション1'),
+          new RestingAtraction('テストアトラクション2'),
+          new RestingAtraction('テストアトラクション3'),
+          new RestingAtraction('テストアトラクション4'),
+          new RestingAtraction('テストアトラクション5'),
+          new RestingAtraction('テストアトラクション6'),
         ],
         [
-          new DateSetShow('テストショウ1'),
-          new DateSetShow('テストショウ2'),
-          new DateSetShow('テストショウ3'),
-          new DateSetShow('テストショウ4'),
-          new DateSetShow('テストショウ5'),
-          new DateSetShow('テストショウ6'),
+          new RestingShow('テストショウ1'),
+          new RestingShow('テストショウ2'),
+          new RestingShow('テストショウ3'),
+          new RestingShow('テストショウ4'),
+          new RestingShow('テストショウ5'),
+          new RestingShow('テストショウ6'),
         ]
       )
     )
