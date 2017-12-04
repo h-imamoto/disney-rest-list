@@ -8,14 +8,7 @@ import { DateSetPark } from '../date-set-park';
   encapsulation: ViewEncapsulation.None
 })
 export class DateSetComponent implements OnInit {
-   park: DateSetPark;
-   date: Date;
 
-
-  constructor(park: DateSetPark, date: Date) {
-    this.park = park;
-    this.date = date;
-   }
 
   ngOnInit() {
   }
