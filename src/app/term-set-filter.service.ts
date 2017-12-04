@@ -9,7 +9,7 @@ import { TermSetLand } from "./term-set-land";
 import { TermSetSea } from "./term-set-sea";
 
 @Injectable()
-export class TermSetFilterService {
+export class TermSetFilter {
 
   constructor() { }
 

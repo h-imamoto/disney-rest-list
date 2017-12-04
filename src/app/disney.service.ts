@@ -1,20 +1,20 @@
 import { Injectable } from '@angular/core';
 
-import  {DateSetFilterService} from './date-set-filter.service';
-import  {TermSetFilterService} from './term-set-filter.service';
-import  {DisneyRepositoryService} from './disney-repository.service';
+import  {DateSetFilter} from './date-set-filter.service';
+import  {TermSetFilter} from './term-set-filter.service';
+import  {DisneyRepository} from './disney-repository.service';
 
 @Injectable({
-  providers: [TermSetFilterService, DateSetFilterService]
+  providers: [TermSetFilter, DateSetFilter]
 })
 export class DisneyService {
-  constructor(private termSetFildterService: TermSetFilterService, private dateSetFilterService: DateSetFilterService) {}
+  constructor(private termSetFildter: TermSetFilter, private dateSetFilter: DateSetFilter) {}
 
   get_date_filtered_schedule(time_now){
-    this.dateSetFilterService.get_schedule(time_now)
+    this.dateSetFilter.get_schedule(time_now)
   }
 
   get_term_filtered_schedule(time_now, term){
-    this.termSetFildterService.get_schedule(time_now, term)
+    this.termSetFildter.get_schedule(time_now, term)
   }
 }

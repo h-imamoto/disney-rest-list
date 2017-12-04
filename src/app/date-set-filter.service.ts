@@ -3,14 +3,14 @@ import { Injectable } from '@angular/core';
 import  {DateSetPark} from './date-set-park';
 import { RestingAtraction } from "./resting-atraction";
 import { RestingShow } from "./resting-show";
-import { RestTerm} from "./rest-term"
-import { EndDate } from "./end-date"
-import { DisneyDate } from "./disney-date"
+import { RestTerm} from "./rest-term";
+import { EndDate } from "./end-date";
+import { DisneyDate } from "./disney-date";
 import { DateSetLand } from "./date-set-land";
 import { DateSetSea } from "./date-set-sea";
 
 @Injectable()
-export class DateSetFilterService {
+export class DateSetFilter {
 
   constructor() { }
 
