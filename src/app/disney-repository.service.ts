@@ -3,6 +3,6 @@ import { OriginalPark } from './original-park';
 
 
 @Injectable()
-export class DisneyRepositoryService {
+export class DisneyRepository {
   constructor() {}
 }
