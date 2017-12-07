@@ -7,9 +7,7 @@ import { DateSetPark } from './date-set-park';
 import { identifierModuleUrl } from '@angular/compiler';
 import { DisneyDate } from './disney-date';
 
-@Injectable({
-  providers: [TermSetFilter, DateSetFilter]
-})
+@Injectable()
 export class DisneyService {
   constructor(private termSetFildter: TermSetFilter, private dateSetFilter: DateSetFilter) { }
 

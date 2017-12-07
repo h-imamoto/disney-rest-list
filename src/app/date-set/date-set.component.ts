@@ -3,6 +3,8 @@ import { DateSetPark } from '../date-set-park';
 import { RestingAtraction } from '../resting-atraction';
 import { DisneyService } from '../disney.service';
 import { DisneyDate } from '../disney-date';
+import { DateSetFilter } from '../date-set-filter.service';
+import { TermSetFilter } from '../term-set-filter.service';
 
 const ATRACTIONS: RestingAtraction[] = [
   new RestingAtraction('空飛ぶダンボ'),
@@ -14,11 +16,12 @@ const ATRACTIONS: RestingAtraction[] = [
   templateUrl: './date-set.component.html',
   styleUrls: ['./date-set.component.css'],
   encapsulation: ViewEncapsulation.None,
-  providers: [DisneyService]
+  providers: [DisneyService, DateSetFilter, TermSetFilter]
 })
 export class DateSetComponent implements OnInit {
   title = '日付指定休止アトラクション/ショー';
-  restAtractions: RestingAtraction[] = this.disneyService.get_date_filtered_schedule();
+  park: DateSetPark = this.disneyService.get_date_filtered_schedule(new DisneyDate('2017/12/8'));
+
 
   constructor(private disneyService: DisneyService) {
 
