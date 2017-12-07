@@ -1,5 +1,5 @@
 export class DisneyDate {
-    value: Date
+    value: Date;
 
     constructor(formattedDate: string) {
         var r: RegExp = /(^[0-9]{4})\/([0-9]{2})\/([0-9]{2})$/;
@@ -12,10 +12,10 @@ export class DisneyDate {
     }
 
     public getUrlValue(): string {
-        var year: number = this.value.getFullYear()
-        var month: number = this.value.getMonth() + 1
-        var date: number = this.value.getDate()
+        var year: number = this.value.getFullYear();
+        var month: number = this.value.getMonth() + 1;
+        var date: number = this.value.getDate();
 
-        return year.toString() + ('0' + month).slice(-2) + ('0' + date).slice(-2)
+        return year.toString() + ('0' + month).slice(-2) + ('0' + date).slice(-2);
     }
 }
