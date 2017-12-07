@@ -17,7 +17,7 @@ export class DisneyService {
     return this.dateSetFilter.get_schedule(disneyDate);
   }
 
-  get_term_filtered_schedule(time_now, term) {
-    this.termSetFildter.get_schedule(time_now, term);
+  get_term_filtered_schedule(startDate: DisneyDate, term) {
+    this.termSetFildter.get_schedule(startDate, term);
   }
 }
