@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { DateSetComponent } from './date-set/date-set.component';
 import { TermSetComponent } from './term-set/term-set.component';
+import { DateSetComponent } from './date-set/date-set.component';
 
 
 @NgModule({
@@ -17,6 +17,6 @@ import { TermSetComponent } from './term-set/term-set.component';
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [DateSetComponent]
 })
 export class AppModule { }
