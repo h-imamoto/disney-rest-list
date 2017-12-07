@@ -13,13 +13,13 @@ export class TermSetFilter {
 
   constructor() { }
 
-  get_schedule(time_now, term) : TermSetPark {
+  get_schedule(startDate: DisneyDate, endDate: DisneyDate): TermSetPark {
     return new TermSetPark(
       new TermSetLand(
         [
           new TermSetAtraction(
             'テストアトラクション1',
-            new RestTerm[new DisneyDate("2017/12/1"), new DisneyDate("2017/12/31")]
+            [new RestTerm(new DisneyDate("2017/12/1"), new DisneyDate("2017/12/31"))]
           ),
           new TermSetAtraction(
             'テストアトラクション2',[],
@@ -27,11 +27,11 @@ export class TermSetFilter {
           ),
           new TermSetAtraction(
             'テストアトラクション3',
-            new RestTerm[new DisneyDate("2017/12/16"), new DisneyDate("2017/12/31")]
+            [new RestTerm(new DisneyDate("2017/12/16"), new DisneyDate("2017/12/31"))]
           ),
           new TermSetAtraction(
             'テストアトラクション4',
-            new RestTerm[new DisneyDate("2018/1/1"), new DisneyDate("2018/1/31")]
+            [new RestTerm(new DisneyDate("2018/1/1"), new DisneyDate("2018/1/31"))]
           ),
           new TermSetAtraction(
             'テストアトラクション5',[],
@@ -45,7 +45,7 @@ export class TermSetFilter {
         [
           new TermSetShow(
             'テストショウ1',
-            new RestTerm[new DisneyDate("2017/12/1"), new DisneyDate("2017/12/31")]
+            [new RestTerm(new DisneyDate("2017/12/1"), new DisneyDate("2017/12/31"))]
           ),
           new TermSetShow(
             'テストショウ2',[],
@@ -53,11 +53,11 @@ export class TermSetFilter {
           ),
           new TermSetShow(
             'テストショウ3',
-            new RestTerm[new DisneyDate("2017/12/16"), new DisneyDate("2017/12/31")]
+            [new RestTerm(new DisneyDate("2017/12/16"), new DisneyDate("2017/12/31"))]
           ),
           new TermSetShow(
             'テストショウ4',
-            new RestTerm[new DisneyDate("2018/1/1"), new DisneyDate("2018/1/31")]
+            [new RestTerm(new DisneyDate("2018/1/1"), new DisneyDate("2018/1/31"))]
           ),
           new TermSetShow(
             'テストショウ5',[],
@@ -73,7 +73,7 @@ export class TermSetFilter {
         [
           new TermSetAtraction(
             'テストアトラクション1',
-            new RestTerm[new DisneyDate("2017/12/1"), new DisneyDate("2017/12/31")]
+            [new RestTerm(new DisneyDate("2017/12/1"), new DisneyDate("2017/12/31"))]
           ),
           new TermSetAtraction(
             'テストアトラクション2',[],
@@ -81,11 +81,11 @@ export class TermSetFilter {
           ),
           new TermSetAtraction(
             'テストアトラクション3',
-            new RestTerm[new DisneyDate("2017/12/16"), new DisneyDate("2017/12/31")]
+            [new RestTerm(new DisneyDate("2017/12/16"), new DisneyDate("2017/12/31"))]
           ),
           new TermSetAtraction(
             'テストアトラクション4',
-            new RestTerm[new DisneyDate("2018/1/1"), new DisneyDate("2018/1/31")]
+            [new RestTerm(new DisneyDate("2018/1/1"), new DisneyDate("2018/1/31"))]
           ),
           new TermSetAtraction(
             'テストアトラクション5',[],
@@ -99,7 +99,7 @@ export class TermSetFilter {
         [
           new TermSetShow(
             'テストショウ1',
-            new RestTerm[new DisneyDate("2017/12/1"), new DisneyDate("2017/12/31")]
+            [new RestTerm(new DisneyDate("2017/12/1"), new DisneyDate("2017/12/31"))]
           ),
           new TermSetShow(
             'テストショウ2',[],
@@ -107,11 +107,11 @@ export class TermSetFilter {
           ),
           new TermSetShow(
             'テストショウ3',
-            new RestTerm[new DisneyDate("2017/12/16"), new DisneyDate("2017/12/31")]
+            [new RestTerm(new DisneyDate("2017/12/16"), new DisneyDate("2017/12/31"))]
           ),
           new TermSetShow(
             'テストショウ4',
-            new RestTerm[new DisneyDate("2018/1/1"), new DisneyDate("2018/1/31")]
+            [new RestTerm(new DisneyDate("2018/1/1"), new DisneyDate("2018/1/31"))]
           ),
           new TermSetShow(
             'テストショウ5',[],
