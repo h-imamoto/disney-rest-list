@@ -1,19 +1,19 @@
 import { Injectable } from '@angular/core';
-import { TermSetPark } from './term-set-park'
-import { TermSetAtraction } from "./term-set-atraction";
-import { RestTerm} from "./rest-term"
-import { EndDate } from "./end-date"
-import { DisneyDate } from "./disney-date"
-import { TermSetShow } from "./term-set-show";
-import { TermSetLand } from "./term-set-land";
-import { TermSetSea } from "./term-set-sea";
+import { TermSetPark } from './term-set-park';
+import { TermSetAtraction } from './term-set-atraction';
+import { RestTerm } from './rest-term';
+import { EndDate } from './end-date';
+import { DisneyDate } from './disney-date';
+import { TermSetShow } from './term-set-show';
+import { TermSetLand } from './term-set-land';
+import { TermSetSea } from './term-set-sea';
 
 @Injectable()
-export class TermSetFilterService {
+export class TermSetFilter {
 
   constructor() { }
 
-  get_schedule(time_now, term) : TermSetPark {
+  get_schedule(time_now, term): TermSetPark {
     return new TermSetPark(
       new TermSetLand(
         [
@@ -22,7 +22,7 @@ export class TermSetFilterService {
             new RestTerm[new DisneyDate("2017/12/1"), new DisneyDate("2017/12/31")]
           ),
           new TermSetAtraction(
-            'テストアトラクション2',[],
+            'テストアトラクション2', [],
             new EndDate(new DisneyDate("2017/12/1"))
           ),
           new TermSetAtraction(
@@ -34,11 +34,11 @@ export class TermSetFilterService {
             new RestTerm[new DisneyDate("2018/1/1"), new DisneyDate("2018/1/31")]
           ),
           new TermSetAtraction(
-            'テストアトラクション5',[],
+            'テストアトラクション5', [],
             new EndDate(new DisneyDate("2017/12/16"))
           ),
           new TermSetAtraction(
-            'テストアトラクション6',[],
+            'テストアトラクション6', [],
             new EndDate(new DisneyDate("2017/1/1"))
           ),
         ],
@@ -48,7 +48,7 @@ export class TermSetFilterService {
             new RestTerm[new DisneyDate("2017/12/1"), new DisneyDate("2017/12/31")]
           ),
           new TermSetShow(
-            'テストショウ2',[],
+            'テストショウ2', [],
             new EndDate(new DisneyDate("2017/12/1"))
           ),
           new TermSetShow(
@@ -60,11 +60,11 @@ export class TermSetFilterService {
             new RestTerm[new DisneyDate("2018/1/1"), new DisneyDate("2018/1/31")]
           ),
           new TermSetShow(
-            'テストショウ5',[],
+            'テストショウ5', [],
             new EndDate(new DisneyDate("2017/12/16"))
           ),
           new TermSetShow(
-            'テストショウ6',[],
+            'テストショウ6', [],
             new EndDate(new DisneyDate("2017/1/1"))
           ),
         ]
@@ -76,7 +76,7 @@ export class TermSetFilterService {
             new RestTerm[new DisneyDate("2017/12/1"), new DisneyDate("2017/12/31")]
           ),
           new TermSetAtraction(
-            'テストアトラクション2',[],
+            'テストアトラクション2', [],
             new EndDate(new DisneyDate("2017/12/1"))
           ),
           new TermSetAtraction(
@@ -88,11 +88,11 @@ export class TermSetFilterService {
             new RestTerm[new DisneyDate("2018/1/1"), new DisneyDate("2018/1/31")]
           ),
           new TermSetAtraction(
-            'テストアトラクション5',[],
+            'テストアトラクション5', [],
             new EndDate(new DisneyDate("2017/12/16"))
           ),
           new TermSetAtraction(
-            'テストアトラクション6',[],
+            'テストアトラクション6', [],
             new EndDate(new DisneyDate("2017/1/1"))
           ),
         ],
@@ -102,7 +102,7 @@ export class TermSetFilterService {
             new RestTerm[new DisneyDate("2017/12/1"), new DisneyDate("2017/12/31")]
           ),
           new TermSetShow(
-            'テストショウ2',[],
+            'テストショウ2', [],
             new EndDate(new DisneyDate("2017/12/1"))
           ),
           new TermSetShow(
@@ -114,11 +114,11 @@ export class TermSetFilterService {
             new RestTerm[new DisneyDate("2018/1/1"), new DisneyDate("2018/1/31")]
           ),
           new TermSetShow(
-            'テストショウ5',[],
+            'テストショウ5', [],
             new EndDate(new DisneyDate("2017/12/16"))
           ),
           new TermSetShow(
-            'テストショウ6',[],
+            'テストショウ6', [],
             new EndDate(new DisneyDate("2017/1/1"))
           ),
         ]
