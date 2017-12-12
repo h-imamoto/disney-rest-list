@@ -7,7 +7,7 @@ import { DisneyDate } from "./disney-date";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  dateSetDate: DisneyDate = new DisneyDate('2017/12/01')
-  termSetStartDate: DisneyDate = new DisneyDate('2017/12/01')
-  termSetEndDate: DisneyDate = new DisneyDate('2018/01/01')
+  dateSetDate: DisneyDate = new DisneyDate(new Date())
+  termSetStartDate: DisneyDate = new DisneyDate(new Date())
+  termSetEndDate: DisneyDate = new DisneyDate(new Date())
 }
