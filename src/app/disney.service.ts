@@ -6,6 +6,7 @@ import { DisneyRepository } from './disney-repository.service';
 import { DateSetPark } from './date-set-park';
 import { identifierModuleUrl } from '@angular/compiler';
 import { DisneyDate } from './disney-date';
+import { TermSetPark } from './term-set-park';
 
 @Injectable()
 export class DisneyService {
@@ -15,7 +16,7 @@ export class DisneyService {
     return this.dateSetFilter.get_schedule(disneyDate);
   }
 
-  get_term_filtered_schedule(startDate: DisneyDate, term) {
-    this.termSetFildter.get_schedule(startDate, term);
+  get_term_filtered_schedule(startDate: DisneyDate, endDate: DisneyDate): TermSetPark{
+    return this.termSetFildter.get_schedule(startDate, endDate);
   }
 }

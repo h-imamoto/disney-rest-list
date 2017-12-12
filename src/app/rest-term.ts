@@ -8,4 +8,12 @@ export class RestTerm {
         this.restStartDate = restStartDate;
         this.restEndDate = restEndDate;
     }
+
+    public getStartDisplayValue(): string {
+        return this.restStartDate.getDisplayValue();
+    }
+
+    public getEndDisplayValue(): string {
+        return this.restEndDate.getDisplayValue();
+    }
 }
