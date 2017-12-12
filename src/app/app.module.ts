@@ -26,6 +26,6 @@ const appRoutes: Routes = [
     )
   ],
   providers: [],
-  bootstrap: [DateSetComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
