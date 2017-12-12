@@ -4,8 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
-import { DateSetComponent } from './date-set/date-set.component';
 import { TermSetComponent } from './term-set/term-set.component';
+import { DateSetComponent } from './date-set/date-set.component';
 
 const appRoutes: Routes = [
   { path: 'date-set/:target', component: DateSetComponent },

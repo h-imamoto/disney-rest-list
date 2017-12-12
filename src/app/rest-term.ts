@@ -1,8 +1,8 @@
-import { DisneyDate } from "./disney-date";
+import { DisneyDate } from './disney-date';
 
 export class RestTerm {
-    restStartDate: DisneyDate
-    restEndDate: DisneyDate
+    restStartDate: DisneyDate;
+    restEndDate: DisneyDate;
 
     constructor(restStartDate: DisneyDate, restEndDate: DisneyDate) {
         this.restStartDate = restStartDate;

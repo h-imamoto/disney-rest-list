@@ -1,3 +1,20 @@
-<p>
+
   date-set works!
-</p>
+  {{ title }}
+  <li>ディズニーランド休止アトラクション</li>
+  <div *ngFor="let atraction of park.land.atractionList">
+    {{ atraction.name }}
+  </div>
+  <li>ディズニーランド休止パレード</li>
+  <div *ngFor="let atraction of park.land.showList">
+    {{ atraction.name }}
+  </div>
+  <li>ディズニーシー休止アトラクション</li>
+  <div *ngFor="let atraction of park.sea.atractionList">
+    {{ atraction.name }}
+  </div>
+  <li>ディズニーランド休止ショー</li>
+  <div *ngFor="let atraction of park.sea.showList">
+    {{ atraction.name }}
+  </div>
+

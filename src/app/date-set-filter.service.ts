@@ -1,20 +1,20 @@
 import { Injectable } from '@angular/core';
 
-import  {DateSetPark} from './date-set-park';
-import { RestingAtraction } from "./resting-atraction";
-import { RestingShow } from "./resting-show";
-import { RestTerm} from "./rest-term";
-import { EndDate } from "./end-date";
-import { DisneyDate } from "./disney-date";
-import { DateSetLand } from "./date-set-land";
-import { DateSetSea } from "./date-set-sea";
+import { DateSetPark } from './date-set-park';
+import { RestingAtraction } from './resting-atraction';
+import { RestingShow } from './resting-show';
+import { RestTerm } from './rest-term';
+import { EndDate } from './end-date';
+import { DisneyDate } from './disney-date';
+import { DateSetLand } from './date-set-land';
+import { DateSetSea } from './date-set-sea';
+
 
 @Injectable()
 export class DateSetFilter {
 
   constructor() { }
-
-  get_schedule(time_now) : DateSetPark {
+  get_schedule(time_now): DateSetPark {
     return new DateSetPark(
       new DateSetLand(
         [
@@ -52,6 +52,6 @@ export class DateSetFilter {
           new RestingShow('テストショウ6'),
         ]
       )
-    )
+    );
   }
 }
