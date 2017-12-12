@@ -3,7 +3,8 @@ export class DisneyDate {
 
     constructor(formattedDate: string | Date) {
         if (formattedDate instanceof Date) {
-            this.value = formattedDate;
+            this.value = new Date(formattedDate.getFullYear(), formattedDate.getMonth(), formattedDate.getDate());
+        
             return;
         }
         var r: RegExp = /(^[0-9]{4})\/([0-9]{2})\/([0-9]{2})$/;
@@ -32,14 +33,14 @@ export class DisneyDate {
     }
 
     public isEqual(targetDate: DisneyDate): boolean {
-        return true;
+        return this.value.getTime() === targetDate.value.getTime();
     }
 
     public isBefore(targetDate: DisneyDate): boolean {
-        return true;
+        return this.value.getTime() < targetDate.value.getTime();
     }
 
     public isAfter(targetDate: DisneyDate): boolean {
-        return true;
+        return this.value.getTime() > targetDate.value.getTime();
     }
 }
