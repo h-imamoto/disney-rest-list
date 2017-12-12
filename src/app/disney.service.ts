@@ -4,6 +4,7 @@ import  {DateSetFilter} from './date-set-filter.service';
 import  {TermSetFilter} from './term-set-filter.service';
 import  {DisneyRepository} from './disney-repository.service';
 import { DisneyDate } from './disney-date';
+import { TermSetPark } from './term-set-park';
 
 @Injectable()
 export class DisneyService {
@@ -13,7 +14,7 @@ export class DisneyService {
     this.dateSetFilter.get_schedule(time_now)
   }
 
-  get_term_filtered_schedule(startDate: DisneyDate, endDate: DisneyDate){
-    this.termSetFildter.get_schedule(startDate, endDate)
+  get_term_filtered_schedule(startDate: DisneyDate, endDate: DisneyDate): TermSetPark{
+    return this.termSetFildter.get_schedule(startDate, endDate)
   }
 }
