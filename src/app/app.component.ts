@@ -9,5 +9,5 @@ import { DisneyDate } from "./disney-date";
 export class AppComponent {
   dateSetDate: DisneyDate = new DisneyDate(new Date())
   termSetStartDate: DisneyDate = new DisneyDate(new Date())
-  termSetEndDate: DisneyDate = new DisneyDate(new Date())
+  termSetEndDate: DisneyDate = new DisneyDate(new Date(new Date().getTime() + 14 * 86400000))
 }
