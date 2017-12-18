@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 import { DateSetPark } from '../date-set-park';
 import { RestingAtraction } from '../resting-atraction';
 import { DisneyService } from '../disney.service';
@@ -20,14 +21,15 @@ const ATRACTIONS: RestingAtraction[] = [
 })
 export class DateSetComponent implements OnInit {
   title = '日付指定休止アトラクション/ショー';
-  park: DateSetPark = this.disneyService.get_date_filtered_schedule(new DisneyDate('2017/12/8'));
+  park: DateSetPark;
 
-
-  constructor(private disneyService: DisneyService) {
+  constructor(private disneyService: DisneyService, private route: ActivatedRoute) {
 
   }
 
   ngOnInit() {
+    this.route.params.subscribe(
+      params => this.park = this.disneyService.get_date_filtered_schedule(new DisneyDate(params['target']))
+    );
   }
-
 }

@@ -7,13 +7,14 @@ import { DisneyDate } from './disney-date';
 import { TermSetShow } from './term-set-show';
 import { TermSetLand } from './term-set-land';
 import { TermSetSea } from './term-set-sea';
+import { OriginalPark } from './original-park';
 
 @Injectable()
 export class TermSetFilter {
 
   constructor() { }
 
-  get_schedule(time_now, term): TermSetPark {
+  get_schedule(originalPark: OriginalPark, startDate: DisneyDate, endDate: DisneyDate): TermSetPark {
     return new TermSetPark(
       new TermSetLand(
         [

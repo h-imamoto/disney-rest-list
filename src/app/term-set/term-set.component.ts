@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 import { DisneyService } from '../disney.service';
 import { DateSetFilter } from '../date-set-filter.service';
 import { TermSetFilter } from '../term-set-filter.service';
@@ -15,11 +16,13 @@ import { DisneyDate } from '../disney-date';
 export class TermSetComponent implements OnInit {
   termSetPark: TermSetPark;
 
-  constructor(private disneyService: DisneyService) { }
+  constructor(private disneyService: DisneyService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.termSetPark = this.disneyService.get_term_filtered_schedule(
-      new DisneyDate('2017/12/01'), new DisneyDate('2018/01/01')
-    )
+    this.route.params.subscribe(
+      params => this.termSetPark = this.disneyService.get_term_filtered_schedule(
+        new DisneyDate(params['start']), new DisneyDate(params['end'])
+      )
+    );
   }
 }
