@@ -7,6 +7,7 @@ import { DateSetPark } from './date-set-park';
 import { identifierModuleUrl } from '@angular/compiler';
 import { DisneyDate } from './disney-date';
 import { TermSetPark } from './term-set-park';
+import { OriginalPark } from './original-park';
 
 @Injectable()
 export class DisneyService {
@@ -17,6 +18,7 @@ export class DisneyService {
   }
 
   get_term_filtered_schedule(startDate: DisneyDate, endDate: DisneyDate): TermSetPark{
-    return this.termSetFildter.get_schedule(startDate, endDate);
+    var originalPark: OriginalPark = new OriginalPark()
+    return this.termSetFildter.get_schedule(originalPark, startDate, endDate);
   }
 }

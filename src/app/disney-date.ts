@@ -12,7 +12,12 @@ export class DisneyDate {
             let result = r.exec(formattedDate);
             this.value = new Date(parseInt(result[1], 10), parseInt(result[2], 10) - 1, parseInt(result[3], 10));
         } else {
-            this.value = new Date(formattedDate);
+            r = /^[0-9]{8}$/;
+            if (r.test(formattedDate)) {
+                this.value = new Date(parseInt(formattedDate.slice(0, 4)), parseInt(formattedDate.slice(4, 6)) - 1, parseInt(formattedDate.slice(6, 8)));
+            } else {
+                this.value = new Date(formattedDate);
+            }
         }
     }
 
