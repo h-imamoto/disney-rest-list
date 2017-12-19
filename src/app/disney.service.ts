@@ -18,7 +18,7 @@ export class DisneyService {
   }
 
   get_term_filtered_schedule(startDate: DisneyDate, endDate: DisneyDate): TermSetPark{
-    var originalPark: OriginalPark = new OriginalPark()
+    var originalPark: OriginalPark = new OriginalPark();
     return this.termSetFildter.get_schedule(originalPark, startDate, endDate);
   }
 }
