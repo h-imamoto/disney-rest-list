@@ -1,8 +1,7 @@
-import { Park } from "./park";
 import { TermSetLand } from "./term-set-land";
 import { TermSetSea } from "./term-set-sea";
 
-export class TermSetPark implements Park {
+export class TermSetPark {
     termSetLand: TermSetLand
     termSetSea: TermSetSea
 
