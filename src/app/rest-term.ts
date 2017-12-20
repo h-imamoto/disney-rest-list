@@ -27,7 +27,8 @@ export class RestTerm {
         return this.isPinpoint(targetStarDate, targetEndDate)
             || this.isExistRestTerm(targetStarDate, targetEndDate)
             || this.isRestTermBefore(targetStarDate, targetEndDate)
-            || this.isRestTermAfter(targetStarDate, targetEndDate);
+            || this.isRestTermAfter(targetStarDate, targetEndDate)
+            || this.isOver(targetStarDate, targetEndDate);
     }
 
     private isPinpoint(targetStarDate: DisneyDate, targetEndDate: DisneyDate): boolean {
@@ -52,5 +53,8 @@ export class RestTerm {
             || targetEndDate.isEqual(this.restStartDate);
     }
 
+    private isOver(targetStarDate: DisneyDate, targetEndDate: DisneyDate): boolean {
+        return targetStarDate.isAfter(this.restStartDate) && targetEndDate.isBefore(this.restEndDate);
+    }
 
 }

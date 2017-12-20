@@ -42,7 +42,7 @@ const MOCK_PARK: Park = new Park(
       new Show(
         'リロのルアウ＆ファン',
         [
-          new RestTerm(new DisneyDate('2017/01/25'), new DisneyDate('2017/02/01'))
+          new RestTerm(new DisneyDate('2017/01/25'), new DisneyDate('2018/02/01'))
         ]
       )
     ]
