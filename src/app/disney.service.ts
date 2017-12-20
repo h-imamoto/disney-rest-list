@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 
-import { DateSetFilter } from './date-set-filter.service';
-import { TermSetFilter } from './term-set-filter.service';
 import { DisneyRepository } from './disney-repository.service';
 import { DateSetPark } from './date-set-park';
 import { identifierModuleUrl } from '@angular/compiler';
