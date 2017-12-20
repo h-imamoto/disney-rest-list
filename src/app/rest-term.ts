@@ -16,4 +16,17 @@ export class RestTerm {
     public getEndDisplayValue(): string {
         return this.restEndDate.getDisplayValue();
     }
+
+    public isRest(targetDate: DisneyDate): boolean {
+        return (targetDate.isAfter(this.restStartDate)
+            && targetDate.isBefore(this.restEndDate))
+            || targetDate.isEqual(this.restStartDate)
+            || targetDate.isEqual(this.restEndDate);
+    }
+
+    public isRestTerm(targetStarDate: DisneyDate, targetEndDate: DisneyDate): boolean {
+        return this.isRest(targetStarDate) || this.isRest(targetEndDate);
+    }
+
+
 }

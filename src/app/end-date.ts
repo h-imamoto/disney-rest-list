@@ -1,7 +1,7 @@
-import { DisneyDate } from "./disney-date";
+import { DisneyDate } from './disney-date';
 
 export class EndDate {
-    value : DisneyDate
+    value: DisneyDate;
 
     constructor(value: DisneyDate) {
         this.value = value;
