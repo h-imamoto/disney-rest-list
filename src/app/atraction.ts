@@ -27,7 +27,7 @@ export class Atraction {
     }
 
     public isRestingBetween(targetStartDate: DisneyDate, targetEndDate: DisneyDate): boolean {
-        return ;
+        return this.restTerms.some(v => v.isRestTerm(targetStartDate, targetEndDate));
     }
 
     public createSetDateAtraction(): RestingAtraction {
@@ -35,6 +35,6 @@ export class Atraction {
     }
 
     public createSetTermAtraction(): TermSetAtraction {
-        return ;
+        return new TermSetAtraction(this.name, this.restTerms, this.endDate);
     }
 }
