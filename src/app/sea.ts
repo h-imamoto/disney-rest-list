@@ -21,10 +21,10 @@ export class Sea {
         );
     }
 
-    public createTermSetSea(targetTerm: RestTerm): TermSetSea {
+    public createTermSetSea(targetStartDate: DisneyDate, targetEndDate: DisneyDate): TermSetSea {
         return new TermSetSea(
-            this.atractionList.filter(v => v.isRestingBetween(targetTerm)).map(v => v.createSetTermAtraction()),
-            this.showList.filter(v => v.isRestingBetween(targetTerm)).map(v => v.createSetTermShow())
+            this.atractionList.filter(v => v.isRestingBetween(targetStartDate, targetEndDate)).map(v => v.createSetTermAtraction()),
+            this.showList.filter(v => v.isRestingBetween(targetStartDate, targetEndDate)).map(v => v.createSetTermShow())
         )
     }
 }

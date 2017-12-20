@@ -21,10 +21,10 @@ export class Park {
         );
     }
 
-    public createTermSetPark(targetTerm: RestTerm): TermSetPark {
+    public createTermSetPark(targetStartDate: DisneyDate, targetEndDate: DisneyDate): TermSetPark {
         return new TermSetPark(
-            this.land.createTermSetLand(targetTerm),
-            this.sea.createTermSetSea(targetTerm)
+            this.land.createTermSetLand(targetStartDate, targetEndDate),
+            this.sea.createTermSetSea(targetStartDate, targetEndDate)
         );
     }
 }

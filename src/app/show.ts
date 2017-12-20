@@ -1,6 +1,8 @@
 import { RestTerm } from './rest-term';
 import { EndDate } from './end-date';
 import { DisneyDate } from './disney-date';
+import { RestingShow } from './resting-show';
+import { TermSetShow } from './term-set-show';
 
 export class Show {
     name: string;
@@ -18,18 +20,20 @@ export class Show {
     }
 
     public isRestingAt(targetDate: DisneyDate): boolean {
-        return true;
+        return this.restTerms.some(function(value){
+            return value.isRest(targetDate);
+        });
     }
 
-    public isRestingBetween(targetTerm: RestTerm): boolean {
-        return true;
+    public isRestingBetween(targetStartDate: DisneyDate, targetEndDate: DisneyDate): boolean {
+        return this.restTerms.some(v => v.isRestTerm(targetStartDate, targetEndDate));
     }
 
-    public createSetDateShow() {
-        return null;
+    public createSetDateShow(): RestingShow {
+        return new RestingShow(this.name);
     }
 
-    public createSetTermShow() {
-        return null;
+    public createSetTermShow(): TermSetShow {
+        return new TermSetShow(this.name, this.restTerms, this.endDate);
     }
 }

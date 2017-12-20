@@ -21,10 +21,10 @@ export class Land {
         );
     }
 
-    public createTermSetLand(targetTerm: RestTerm): TermSetLand {
+    public createTermSetLand(targetStartDate: DisneyDate, targetEndDate: DisneyDate): TermSetLand {
         return new TermSetLand(
-            this.atractionList.filter(v => v.isRestingBetween(targetTerm)).map(v => v.createSetTermAtraction()),
-            this.showList.filter(v => v.isRestingBetween(targetTerm)).map(v => v.createSetTermShow())
+            this.atractionList.filter(v => v.isRestingBetween(targetStartDate, targetEndDate)).map(v => v.createSetTermAtraction()),
+            this.showList.filter(v => v.isRestingBetween(targetStartDate, targetEndDate)).map(v => v.createSetTermShow())
         )
     }
 }
