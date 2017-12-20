@@ -15,4 +15,8 @@ export class TermSetShow {
         this.restTerms = restTerms
         this.endDate = endDate
     }
+
+    public isScheduledEndDate(): boolean {
+        return !!this.endDate;
+    }
 }
