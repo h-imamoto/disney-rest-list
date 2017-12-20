@@ -2,7 +2,7 @@
 <h3>Atractions</h3>
 <h4>休止予定アトラクション</h4>
 <div *ngFor="let atraction of termSetPark.termSetLand.termSetAtractionList">
-  <div *ngIf="!atraction.endDate">
+  <div *ngIf="!atraction.isScheduledEndDate()">
     <p>アトラクション名：{{atraction.name}}</p>
     <p>休止予定期間一覧</p>
     <ul *ngFor="let restTerm of atraction.restTerms">
@@ -12,7 +12,7 @@
 </div>
 <h4>終了予定アトラクション</h4>
 <div *ngFor="let atraction of termSetPark.termSetLand.termSetAtractionList">
-  <div *ngIf="atraction.endDate">
+  <div *ngIf="atraction.isScheduledEndDate()">
     <p>アトラクション名：{{atraction.name}}</p>
     <p>終了予定日：{{atraction.endDate.value.getDisplayValue()}}</p>
     <div *ngIf="atraction.restTerms.length > 0">
@@ -26,7 +26,7 @@
 <h3>Shows</h3>
 <h4>休止予定ショー</h4>
 <div *ngFor="let show of termSetPark.termSetLand.termSetShowList">
-  <div *ngIf="!show.endDate">
+  <div *ngIf="!show.isScheduledEndDate()">
     <p>ショー名：{{show.name}}</p>
     <p>休止予定期間一覧</p>
     <ul *ngFor="let restTerm of show.restTerms">
@@ -36,7 +36,7 @@
 </div>
 <h4>終了予定ショー</h4>
 <div *ngFor="let show of termSetPark.termSetLand.termSetShowList">
-  <div *ngIf="show.endDate">
+  <div *ngIf="show.isScheduledEndDate()">
     <p>ショー名：{{show.name}}</p>
     <p>終了予定日：{{show.endDate.value.getDisplayValue()}}</p>
     <div *ngIf="show.restTerms.length > 0">
@@ -51,7 +51,7 @@
 <h3>Atractions</h3>
 <h4>休止予定アトラクション</h4>
 <div *ngFor="let atraction of termSetPark.termSetSea.termSetAtractionList">
-  <div *ngIf="!atraction.endDate">
+  <div *ngIf="!atraction.isScheduledEndDate()">
     <p>アトラクション名：{{atraction.name}}</p>
     <p>休止予定期間一覧</p>
     <ul *ngFor="let restTerm of atraction.restTerms">
@@ -61,7 +61,7 @@
 </div>
 <h4>終了予定アトラクション</h4>
 <div *ngFor="let atraction of termSetPark.termSetSea.termSetAtractionList">
-  <div *ngIf="atraction.endDate">
+  <div *ngIf="atraction.isScheduledEndDate()">
     <p>アトラクション名：{{atraction.name}}</p>
     <p>終了予定日：{{atraction.endDate.value.getDisplayValue()}}</p>
     <div *ngIf="atraction.restTerms.length > 0">
@@ -75,7 +75,7 @@
 <h3>Shows</h3>
 <h4>休止予定ショー</h4>
 <div *ngFor="let show of termSetPark.termSetSea.termSetShowList">
-  <div *ngIf="!show.endDate">
+  <div *ngIf="!show.isScheduledEndDate()">
     <p>ショー名：{{show.name}}</p>
     <p>休止予定期間一覧</p>
     <ul *ngFor="let restTerm of show.restTerms">
@@ -85,7 +85,7 @@
 </div>
 <h4>終了予定ショー</h4>
 <div *ngFor="let show of termSetPark.termSetSea.termSetShowList">
-  <div *ngIf="show.endDate">
+  <div *ngIf="show.isScheduledEndDate()">
     <p>ショー名：{{show.name}}</p>
     <p>終了予定日：{{show.endDate.value.getDisplayValue()}}</p>
     <div *ngIf="show.restTerms.length > 0">

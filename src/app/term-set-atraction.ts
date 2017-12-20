@@ -16,4 +16,8 @@ export class TermSetAtraction {
         this.restTerms = restTerms;
         this.endDate = endDate;
     }
+
+    public isScheduledEndDate(): boolean {
+        return !!this.endDate;
+    }
 }
