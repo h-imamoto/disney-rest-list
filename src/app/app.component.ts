@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { Component } from '@angular/core';
 import { DisneyDate } from "./disney-date";
 
@@ -7,7 +8,7 @@ import { DisneyDate } from "./disney-date";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  dateSetDate: DisneyDate = new DisneyDate(new Date())
-  termSetStartDate: DisneyDate = new DisneyDate(new Date())
-  termSetEndDate: DisneyDate = new DisneyDate(new Date(new Date().getTime() + 14 * 86400000))
+  dateSetDate: string = new DisneyDate(new Date()).getUrlValue()
+  termSetStartDate: string = new DisneyDate(new Date()).getUrlValue()
+  termSetEndDate: string = new DisneyDate(new Date(new Date().getTime() + 14 * 86400000)).getUrlValue()
 }

@@ -1,8 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <h1>Disney Rest List</h1>
 <nav>
-  <a [routerLink]="'/date-set/' + dateSetDate.getUrlValue()" routerLinkActive="active">日付を指定して検索</a>
-  <a [routerLink]="'/term-set/' + termSetStartDate.getUrlValue() + '/' + termSetEndDate.getUrlValue()" routerLinkActive="active">期間を指定して検索</a>
+  <div>
+  <label><input [(ngModel)]="dateSetDate" id="dateSetDate">に休止している施設を</label>
+  <button [routerLink]="'/date-set/' + dateSetDate" routerLinkActive="active">検索!!</button>
+  </div>
+  <div>
+  <label><input [(ngModel)]="termSetStartDate" id="termSetStartDate">から</label>
+  <label><input [(ngModel)]="termSetEndDate" id="termSetEndDate">の間に休止する日がある施設を</label>
+  <button [routerLink]="'/term-set/' + termSetStartDate + '/' + termSetEndDate" routerLinkActive="active">検索!!</button>
+  </div>
 </nav>
 <router-outlet></router-outlet>
 
