@@ -20,13 +20,13 @@ const MOCK_PARK: Park = new Park(
       new Atraction(
         'イッツ・ア・スモールワールド',
         [
-          new RestTerm(new DisneyDate('2017/03/01'), new DisneyDate('2018/04/14'))
+          new RestTerm(new DisneyDate('2017/03/01'), new DisneyDate('2017/12/20'))
         ]
       ),
       new Atraction(
         'ガジェットのゴーコースター',
         [
-          new RestTerm(new DisneyDate('2018/01/09'), new DisneyDate('2018/02/08')),
+          new RestTerm(new DisneyDate('2017/12/20'), new DisneyDate('2018/01/03')),
           new RestTerm(new DisneyDate('2018/06/25'), new DisneyDate('2018/07/14'))
         ]
       )
@@ -40,7 +40,7 @@ const MOCK_PARK: Park = new Park(
       new Show(
         'リロのルアウ＆ファン',
         [
-          new RestTerm(new DisneyDate('2018/01/25'), new DisneyDate('2018/02/01'))
+          new RestTerm(new DisneyDate('2017/01/25'), new DisneyDate('2018/02/01'))
         ]
       )
     ]
@@ -50,13 +50,13 @@ const MOCK_PARK: Park = new Park(
       new Atraction(
         'レイジングスピリッツ',
         [
-          new RestTerm(new DisneyDate('2017/12/07'), new DisneyDate('2017/12/26'))
+          new RestTerm(new DisneyDate('2017/12/21'), new DisneyDate('2017/12/26'))
         ]
       ),
       new Atraction(
         'アクアトピア',
         [
-          new RestTerm(new DisneyDate('2018/01/09'), new DisneyDate('2018/01/20'))
+          new RestTerm(new DisneyDate('2018/01/02'), new DisneyDate('2018/01/20'))
         ]
       )
     ],
@@ -75,7 +75,7 @@ const MOCK_PARK: Park = new Park(
       )
     ]
   )
-)
+);
 
 @Injectable()
 export class DisneyService {
@@ -85,7 +85,7 @@ export class DisneyService {
     return MOCK_PARK.createDateSetPark(disneyDate);
   }
 
-  get_term_filtered_schedule(startDate: DisneyDate, endDate: DisneyDate): TermSetPark{
+  get_term_filtered_schedule(startDate: DisneyDate, endDate: DisneyDate): TermSetPark {
     return MOCK_PARK.createTermSetPark(startDate, endDate);
   }
 }
